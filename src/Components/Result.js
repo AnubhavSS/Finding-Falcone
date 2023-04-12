@@ -5,8 +5,8 @@ import Service from '../Service';
 import  './style.css'
 const Result = () => {
   let {state}= useLocation();
-const [planets,setPlanets] = useState([])
-const [vehicles, setvehicles] = useState([])
+const [planets] = useState([])
+const [vehicles] = useState([])
 const [loading, setloading] = useState(true)
 const [output, setoutput] = useState({planet_name:" ", status:"success"})
 const [stats, setstatus] = useState(false)
@@ -14,9 +14,6 @@ let par=state[0]
 let varr=state[1]
 let token=state[2]
 
-
-
-  
   useEffect(() => {
 
     for(let i=0;i<4;i++)
@@ -30,8 +27,6 @@ Service.Result( planets,vehicles,token).then((response)=>{  setoutput(response.d
 setstatus(true)}
   }, [])
 
-
-  
   return (
     <div>
       
