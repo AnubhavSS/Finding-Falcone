@@ -15,7 +15,6 @@ let varr=state[1]
 let token=state[2]
 
   useEffect(() => {
-
     for(let i=0;i<4;i++)
   { 
     planets[i]=(par[i].name)
@@ -25,7 +24,7 @@ Service.Result( planets,vehicles,token).then((response)=>{  setoutput(response.d
 
   if(output.status==="success"){
 setstatus(true)}
-  }, [])
+  }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div>
