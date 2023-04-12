@@ -5,15 +5,15 @@ class Service{
 
     getPlanets()
     {
-        return axios.get('https://findfalcone.herokuapp.com/planets')
+        return axios.get('https://findfalcone.geektrust.com/planets')
     }
     getVehicles()
     {
-        return axios.get('https://findfalcone.herokuapp.com/vehicles')
+        return axios.get('https://findfalcone.geektrust.com/vehicles')
     }
     getToken()
     {      
-        return axios.post('https://findfalcone.herokuapp.com/token', {},{ headers:{
+        return axios.post('https://findfalcone.geektrust.com/token', {},{ headers:{
             'accept' :'application/json'
          }})
     }
@@ -33,7 +33,7 @@ class Service{
                 }
               }
              
-        return axios.post('https://findfalcone.herokuapp.com/find',data,axiosConfig)
+        return axios.post('https://findfalcone.geektrust.com/find',data,axiosConfig)
     }
 
 }
